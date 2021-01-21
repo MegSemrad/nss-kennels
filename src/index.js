@@ -24,7 +24,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Kennel />
-    </Router>
+    </Router> 
   </React.StrictMode>,
   document.getElementById('root')
 );

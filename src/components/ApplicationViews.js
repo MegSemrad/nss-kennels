@@ -18,18 +18,19 @@ export const ApplicationViews = () => {
             <Route path="/animals">
                 <AnimalCard />
             </Route>
-            
+
             <Route path="/locations">
                 <LocationCard />
             </Route>
-            
+
             <Route path="/employees">
                 <EmployeeCard />
             </Route>
-            
+
             <Route path="/customers">
                 <CustomerCard />
             </Route>
         </>
     )
-}
+} 
+
