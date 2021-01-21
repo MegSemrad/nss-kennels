@@ -1,5 +1,6 @@
 /*
-  - React is a library, it does not care about the database
+  - React is a library with the responsibility of managing how data is
+    displayed to the user, it does not care about the database
 
   - index.js is the entry file/the JavaScript file that runs 
     first in our app 
