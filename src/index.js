@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/*
+  - React is a library, it does not care about the database
 
+  - index.js is the entry file/the JavaScript file that runs 
+    first in our app 
+  - This is why Kennel.js is imported here. 
+*/
+
+import React from "react"
+import ReactDOM from "react-dom"
+import { Kennel } from "./components/Kennel"
+import './index.css'
+
+/*
+  - render means send to DOM
+  - render takes two arguments - component & element where sending it
+  - <Kennel /> is just calling the Kennel function 
+  - Remember: this looks like HTML but is in fact JSX - Javascript 
+    that looks like HTML this allows for better visualization of
+    what code will look like in DOM
+*/
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Kennel /> 
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
