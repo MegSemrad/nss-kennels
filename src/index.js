@@ -1,4 +1,10 @@
 /*
+  - database in a different directory but will need this...
+  json-server -p 8088 -w database.json
+*/
+
+
+/*
   - React is a library, it does not care about the database
 
   - index.js is the entry file/the JavaScript file that runs 

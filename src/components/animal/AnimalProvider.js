@@ -2,12 +2,12 @@
     - In React library there is feature called Context API and it 
       provides two functions (useState & createContext)
  */
-import React, { useState, createContext } from "react"
+import React, { useState, createContext } from "react";
 
 
 
 // The context is imported and used by individual components that need data
-export const AnimalContext = createContext()
+export const AnimalContext = createContext();
 
 // What is the hook? -- listen for when watch recording 
 
@@ -26,7 +26,7 @@ export const AnimalProvider = (props) => {
         return fetch("http://localhost:8088/animals?_expand=location")
         .then(res => res.json())
         .then(setAnimals)
-    }
+    };
 
     const addAnimal = animalObj => {
         return fetch("http://localhost:8088/animals", {
@@ -37,7 +37,7 @@ export const AnimalProvider = (props) => {
             body: JSON.stringify(animalObj)
         })
         .then(getAnimals)
-    }
+    };
 
     /*
         You return a context provider which has the
@@ -52,4 +52,4 @@ export const AnimalProvider = (props) => {
             {props.children}
         </AnimalContext.Provider>
     )
-}
+};
