@@ -1,9 +1,14 @@
-import React from "react"
-import "./Customer.css"
+/*
+    - This component is a child of the Kennel component
+*/
 
-export const CustomerCard = () => (
+
+import React from "react";
+import "./Customer.css";
+
+export const CustomerCard = ({customer}) => (
     <section className="customer">
-        <h3 className="customer__name">Hannah Hall</h3>
-        <div className="customer__address">Address: 100 Infinity Way</div>
+        <h3 className="customer__name">{customer.name}</h3>
+        <div className="customer__address">Address: {customer.address}</div>
     </section>
-)
+);

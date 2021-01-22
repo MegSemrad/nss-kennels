@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from "react"
-import { AnimalContext } from "./AnimalProvider"
+import React, { useContext, useEffect } from "react";
+import { AnimalContext } from "./AnimalProvider";
 // Pulling in object above 
-import { AnimalCard } from "./AnimalCard"
+import { AnimalCard } from "./AnimalCard";
 // Pulling in reusable component above 
-import "./Animal.css"
+import "./Animal.css";
 
 export const AnimalList = () => {
   // This state changes when `getAnimals()` is invoked below
@@ -28,4 +28,4 @@ export const AnimalList = () => {
       }
     </div>
   )
-}
+};
