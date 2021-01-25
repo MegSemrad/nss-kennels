@@ -1,5 +1,6 @@
 /*
     - This component is a child of the Kennel component
+    - Note "className" is used to add a class and not "class" itself
 */
 
 import React from "react";

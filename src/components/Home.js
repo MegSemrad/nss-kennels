@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 
 export const Home = () => (
     <>
@@ -9,6 +9,5 @@ export const Home = () => (
             <div>Visit Us at the Nashville North Location</div>
             <div>500 Puppy Way</div>
         </address>
-        {/* <PropsAndState yourName={"Brenda"} /> */}
     </>
-)
+);
