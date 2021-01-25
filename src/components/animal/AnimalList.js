@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom" // import from libraries before yo
 import { AnimalContext } from "./AnimalProvider";
 // import { LocationContext } from "../location/LocationProvider";
 // import { CustomerContext } from "../customer/CustomerProvider";
-import { Animal } from "./Animal";
 import { AnimalCard } from "./AnimalCard";
 import "./Animal.css";
 // When you see "..." in example code, it basically means "etc"
