@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from "react";
+import { useHistory } from "react-router-dom" // import from libraries before your local modules
 import { AnimalContext } from "./AnimalProvider";
 // import { LocationContext } from "../location/LocationProvider";
 // import { CustomerContext } from "../customer/CustomerProvider";
 import { Animal } from "./Animal";
 import { AnimalCard } from "./AnimalCard";
 import "./Animal.css";
-
+// When you see "..." in example code, it basically means "etc"
 
 
 /*
@@ -15,6 +16,7 @@ import "./Animal.css";
 export const AnimalList = () => {
     // defining these as local variables
   const { animals, getAnimals } = useContext(AnimalContext)
+  const history = useHistory()
 //   const { locations, getLocations } = useContext(LocationContext)
 //   const { customers, getCustomers } = useContext(CustomerContext)
   
@@ -40,7 +42,11 @@ export const AnimalList = () => {
 
   return (
     <div className="animals">
-      {animals.map(animal => {
+        <h2>Animals</h2>
+		    <button onClick={() => {history.push("/animals/create")}}>
+                Add Animal
+            </button>
+        {animals.map(animal => {
             // const owner = customers.find(c => c.id === animal.customerId)
             // const clinic = locations.find(l => l.id === animal.locationId)
         
@@ -49,7 +55,7 @@ export const AnimalList = () => {
                         // owner={owner} //argument
                         animal={animal} /> //argument
         })
-      }
+        }
     </div>
   )
 };
