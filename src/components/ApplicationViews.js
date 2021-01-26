@@ -31,6 +31,7 @@ import { LocationDetail } from "./location/LocationDetail";
 import { EmployeeList } from "./employee/EmployeeList";
 import { EmployeeProvider } from "./employee/EmployeeProvider";
 import { EmployeeForm } from "./employee/EmployeeForm";
+import { EmployeeDetail } from "./employee/EmployeeDetail";
 import { CustomerList } from "./customer/CustomerList";
 import { CustomerProvider } from "./customer/CustomerProvider";
 
@@ -96,6 +97,13 @@ export const ApplicationViews = () => {
                     </Route>
                 </LocationProvider>
             </EmployeeProvider>
+
+            <EmployeeProvider>
+                <Route exact path="/employees/detail/:employeeId(\d+)">
+                    <EmployeeDetail />
+                </Route>
+            </EmployeeProvider>
+
 
 
 
