@@ -41,7 +41,7 @@ export const AnimalList = () => {
 
   return (
     <div className="animals">
-        <h2>Animals</h2>
+        <h2 className="titleWord">Animals</h2>
 		    <button onClick={() => {history.push("/animals/create")}}>
                 Add Animal
             </button>

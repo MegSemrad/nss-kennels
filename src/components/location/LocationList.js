@@ -24,8 +24,8 @@ export const LocationList = () => {
 
   return (
     <div className="locations">
-      <h2>Locations</h2>
-      <button onClick={() => { history.push("/locations/create") }}>
+      <h2 className="titleWord">Locations</h2>
+      <button className="btn-add-location" onClick={() => { history.push("/locations/create") }}>
         Add Location
       </button>
       {console.log("LocationList: Render", locations)}
