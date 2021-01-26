@@ -49,11 +49,19 @@ export const AnimalProvider = (props) => {
         .then(getAnimals)
     };
 
+
     /*
-        You return a context provider which has the
-        `animals` state, `getAnimals` function,
-        and the `addAnimal` function as keys. This
-        allows any child elements to access them.
+        - use _expand to retrive nested data
+    */
+    const getAnimalById = (id) => {
+        return fetch(`http://localhost:8088/animals/${id}?_expand=location&_expand=customer`)
+            .then(res => res.json())
+    }
+
+    /*
+        - You return a context provider which has the `animals` state, `getAnimals` function,
+          the `addAnimal`, and the `getAnimalById` function as keys. This allows any child 
+          elements to access them.
 
         - This below is what is returned from this entire AnimalProvider function 
         - .Provider is how other components can get (when using) whatever AnimalProvider provides 
@@ -61,7 +69,7 @@ export const AnimalProvider = (props) => {
     */
     return (
         <AnimalContext.Provider value={{
-            animals, getAnimals, addAnimal
+            animals, getAnimals, addAnimal, getAnimalById
         }}>
             {props.children}
         </AnimalContext.Provider>
