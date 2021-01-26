@@ -22,6 +22,7 @@ import "./NavBar.css";
 
 export const NavBar = (props) => {
     return (
+        <div className="navbarCSS">
         <ul className="navbar">
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/">NSS Kennels</Link>
@@ -39,5 +40,6 @@ export const NavBar = (props) => {
                 <Link className="navbar__link" to="/employees">Employees</Link>
             </li>
         </ul>
+        </div>
     )
 };
