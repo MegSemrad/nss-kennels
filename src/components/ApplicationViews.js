@@ -56,7 +56,12 @@ export const ApplicationViews = () => {
                         <Route exact path="/animals/create">
                             <AnimalForm />
                         </Route>
-                    </CustomerProvider>
+                        <Route path="/animals/edit/:animalId(\d+)"> 
+                        {/* user brought to the above URL upon clicking Edit button 
+                        from AniamlDetails.js -- therefore the AnimalForm will be rendered */}
+                            <AnimalForm />
+                        </Route>
+                </CustomerProvider>
                 </LocationProvider>
             </AnimalProvider>
 
