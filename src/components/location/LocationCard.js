@@ -11,8 +11,8 @@ export const LocationCard = ({ location }) => {
           {location.name}
         </Link>
       </h3>
-      <div className="location__employee__count">{location.employees?.length} employees</div>
-      <div className="location__animal__count">{} animals</div> 
+      <div className="location__employee__count">{location.employees.length} employees</div>
+      <div className="location__animal__count">{location.animals.length} animals</div> 
     </section>
 
   )
